@@ -1,103 +1,191 @@
-# Electric Vehicle Data Analysis Dashboard
+# ⚡ Electric Vehicle Data Analysis Dashboard
 
-## Project Overview
+## 📌 Project Overview
 
-This project presents an interactive Tableau dashboard built on electric vehicle registration data. The objective is to analyze the EV market from multiple angles, including adoption trends, state-wise distribution, leading manufacturers, popular models, CAFV eligibility, and electric range performance. [web:17]
+This project presents an interactive **Tableau Dashboard** built using Electric Vehicle (EV) registration data. The dashboard provides insights into EV adoption, manufacturer dominance, popular vehicle models, state-wise distribution, and the market share of Battery Electric Vehicles (BEVs) and Plug-in Hybrid Electric Vehicles (PHEVs).
 
-## Problem Statements
+The primary objective of this project is to transform raw EV registration data into meaningful business insights through interactive visualizations.
 
-The dashboard was created to answer the following questions:
+---
 
-1. How has electric vehicle adoption changed over time?
-2. Which states have the highest number of electric vehicles?
-3. Which manufacturers dominate the EV market?
-4. Which EV models are most popular?
-5. What is the distribution of Battery Electric Vehicles (BEVs) and Plug-in Hybrid Electric Vehicles (PHEVs)?
-6. How many vehicles are eligible for Clean Alternative Fuel Vehicle (CAFV) incentives?
-7. What does the average electric range tell us about EV technology and efficiency? [web:13][web:17]
+# 📷 Dashboard Preview
 
-## Dataset Used
+<p align="center">
+  <img src="Screenshot 2026-06-26 165557.png" alt="Electric Vehicle Dashboard" width="1000"/>
+</p>
 
-The analysis uses the `Electric_Vehicles.csv` dataset provided for the project. The dataset includes key EV attributes such as model year, state, manufacturer, model name, electric range, vehicle type, and CAFV eligibility. [file:21][web:17]
+---
 
-## Methodology
+# 🎯 Business Problem
 
-The project followed a structured workflow:
+The dashboard answers the following business questions:
 
-### 1. Data Collection
-The EV dataset was gathered and used as the foundation for the dashboard analysis. [file:21]
+- How many electric vehicles are currently registered?
+- What is the distribution of BEVs and PHEVs?
+- Which vehicle manufacturers dominate the EV market?
+- Which EV models are the most popular?
+- Which states have the highest EV registrations?
+- What insights can businesses and policymakers derive from EV adoption patterns?
 
-### 2. Data Preparation
-The data was reviewed and cleaned before analysis. This step typically includes handling missing values, standardizing labels, and ensuring fields such as year, state, and manufacturer are usable for grouping and aggregation. [web:17]
+---
 
-### 3. Metric Definition
-Core metrics were defined to summarize the dataset, including:
-- Total vehicles
-- Average electric range
-- BEV count
-- PHEV count
-- CAFV eligibility split [web:17]
+# 📂 Dataset
 
-### 4. Visualization Selection
-Different chart types were used to match the analytical need:
-- Area chart for vehicle growth over time
-- Map for geographic distribution
-- Bar chart for top manufacturers
-- Treemap for top vehicle models
-- Donut chart for CAFV eligibility [web:17]
+The project uses the **Electric_Vehicles.csv** dataset containing EV registration details such as:
 
-### 5. Dashboard Development
-The selected visuals were combined into a single Tableau dashboard with filters and interactive elements, allowing users to explore the EV market dynamically. [web:13][web:17]
+- VIN (Vehicle Identification Number)
+- State
+- County
+- City
+- Make
+- Model
+- Model Year
+- Electric Vehicle Type
+- Electric Range
+- CAFV Eligibility
+- Electric Utility
+- Legislative District
 
-## Key Insights
+---
 
-The dashboard highlights several important insights:
-- EV adoption has grown steadily over the years.
-- A few states account for a large share of registered EVs.
-- Tesla and a small group of manufacturers dominate the market.
-- A limited number of models contribute most of the registrations.
-- CAFV eligibility shows the role of incentives in supporting adoption. [web:17]
+# ⚙️ Project Workflow
 
-## Problem-to-Solution Mapping
+## 1. Data Collection
 
-| Problem Statement | Solution Implemented |
-|---|---|
-| Understand EV growth over time | Built an area chart using model year to show adoption trends. [web:17] |
-| Identify leading states | Used a geographic map to visualize total EV count by state. [web:17] |
-| Find dominant manufacturers | Created a bar chart ranking manufacturers by vehicle count. [web:17] |
-| Discover popular models | Used a treemap to show the top EV models by volume. [web:17] |
-| Measure BEV vs PHEV split | Built a donut chart to compare vehicle type distribution. [web:17] |
-| Check CAFV eligibility | Displayed eligibility breakdown to understand incentive impact. [web:17] |
-| Evaluate EV efficiency | Used average electric range as a KPI to represent technology progress. [web:17] |
+Imported the Electric Vehicle registration dataset into Tableau.
 
-## Tools Used
+---
+
+## 2. Data Cleaning
+
+Performed preprocessing tasks including:
+
+- Handling missing values
+- Standardizing categorical values
+- Validating state and manufacturer names
+- Removing inconsistencies
+
+---
+
+## 3. KPI Creation
+
+The following KPIs were created:
+
+- Total Vehicles
+- Total Battery Electric Vehicles (BEV)
+- Total Plug-in Hybrid Electric Vehicles (PHEV)
+- Percentage share of BEVs
+- Percentage share of PHEVs
+
+---
+
+## 4. Dashboard Development
+
+The dashboard includes the following visualizations:
+
+- KPI Cards
+- Top 10 Vehicle Models
+- Top 10 Vehicle Manufacturers
+- State-wise EV Distribution Map
+
+Interactive filters allow users to explore the dataset dynamically.
+
+---
+
+# 📊 Dashboard Features
+
+### 🚗 KPI Cards
+
+Displays:
+
+- Total Vehicles
+- Total BEVs
+- Total PHEVs
+- BEV Percentage
+- PHEV Percentage
+
+---
+
+### 🏭 Top 10 Manufacturers
+
+Ranks manufacturers based on total registered electric vehicles.
+
+Key insight:
+- Tesla dominates the market by a significant margin.
+
+---
+
+### 🚘 Top 10 Vehicle Models
+
+Shows the most popular electric vehicle models.
+
+Key insight:
+- Tesla Model Y and Tesla Model 3 account for a major share of EV registrations.
+
+---
+
+### 🗺️ State-wise Distribution
+
+Interactive geographical map showing EV registrations across different states.
+
+Key insight:
+- Washington has the highest concentration of registered EVs in the dataset.
+
+---
+
+# 💡 Key Insights
+
+- Battery Electric Vehicles (BEVs) account for approximately **76.92%** of total registrations.
+- Plug-in Hybrid Electric Vehicles (PHEVs) contribute around **23.08%**.
+- Tesla is the leading EV manufacturer.
+- Tesla Model Y and Model 3 are the most registered EV models.
+- EV adoption is concentrated in a few states, particularly Washington.
+
+---
+
+# 🛠️ Technologies Used
 
 - Tableau Public
-- CSV dataset
-- Data cleaning and transformation
-- Interactive dashboard design [web:17]
+- Microsoft Excel / CSV Dataset
+- Data Cleaning
+- Data Visualization
+- Dashboard Design
 
-## How to Run the Project
+---
 
-1. Download the dataset.
-2. Open the Tableau workbook or dashboard.
-3. Connect Tableau to the CSV file.
-4. Refresh the data source if needed.
-5. Explore the dashboard using the available filters and charts. [file:21][web:17]
+# 🚀 How to Use
 
-## Future Scope
+1. Clone this repository.
+2. Open the Tableau Workbook.
+3. Connect the `Electric_Vehicles.csv` dataset.
+4. Refresh the data source if required.
+5. Explore the dashboard using the interactive visualizations.
 
-Possible enhancements for this project include:
-- Adding time-series forecasting for EV adoption.
-- Comparing EV adoption across regions on a per-capita basis.
-- Including charging station density analysis.
-- Adding more advanced filtering by year, model, and manufacturer.
-- Creating a second dashboard for policy and infrastructure planning. [web:17]
+---
 
-## Conclusion
+# 📈 Future Enhancements
 
-This project turns raw electric vehicle data into an interactive analytical dashboard that explains market growth, regional adoption, manufacturer share, model popularity, and incentive eligibility. It is useful for business analysis, policy planning, academic study, and portfolio presentation. [web:17]
+Potential improvements include:
 
-## Dashboard Link
+- Time-series analysis of EV adoption
+- EV growth forecasting
+- Charging station analysis
+- Manufacturer market share trends
+- Regional comparison dashboard
+- Additional filters (Year, State, Make, Model)
 
-[View the Tableau Dashboard](https://public.tableau.com/authoring/ElectricVehicleDataAnalysis_17583850628090/MainDashboard#1)
+---
+
+# 📌 Conclusion
+
+This Tableau dashboard provides a comprehensive overview of electric vehicle registrations across the United States. It enables users to analyze market trends, compare manufacturers, identify popular vehicle models, and understand the geographic distribution of EV adoption through an interactive and business-friendly interface.
+
+---
+
+# 🔗 Tableau Dashboard
+
+👉 **View the Interactive Dashboard**
+
+https://public.tableau.com/views/ElectricVehicleDataAnalysis_17583850628090/MainDashboard?:showVizHome=no
+
+---
