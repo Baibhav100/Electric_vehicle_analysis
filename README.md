@@ -1,9 +1,4 @@
 # ⚡ Electric Vehicle Data Analysis Dashboard
-# 📷 Dashboard Preview
-
-<p align="center">
-  <img src="dashboard.png" alt="Electric Vehicle Dashboard" width="1000"/>
-</p>
 
 ## 📌 Project Overview
 
